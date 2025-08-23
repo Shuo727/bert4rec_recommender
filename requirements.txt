@@ -3,6 +3,7 @@ numpy
 matplotlib
 scikit-learn
 torch
+seaborn
 transformers
 notebook
 ipykernel

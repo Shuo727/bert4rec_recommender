@@ -19,7 +19,7 @@ This mini project explored the BERT4Rec model on the MovieLens dataset, and comp
 
  The high-level structure of this project is as the follows:
 
-'''bash
+```bash
  bert4rec_recommender/
 │
 ├── data/                      # Folder to store raw data and preprocessed data
@@ -39,7 +39,7 @@ This mini project explored the BERT4Rec model on the MovieLens dataset, and comp
 │
 ├── requirements.txt           # Python dependencies (e.g., torch, pandas, numpy)
 └── README.md                  # Project description, key findings, etc.
-'''
+```
 
 ## Results Summary
 

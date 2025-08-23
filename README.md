@@ -18,10 +18,12 @@ This mini project explored the BERT4Rec model on the MovieLens dataset, and comp
 (NOTE that the configurable hyperparameters of the model is not tuned for optimal performance.)
 
  The high-level structure of this project is as the follows:
+
+'''bash
  bert4rec_recommender/
 │
-├── data/                      # Folder to store raw data, preprocessed data, or output files
-│   └── raw/                   # Original MovieLens 32m dataset (e.g., ratings.csv, movies.csv)
+├── data/                      # Folder to store raw data and preprocessed data
+│   └── raw/                   # Original MovieLens 32m dataset (download from: https://grouplens.org/datasets/movielens/32m/)
 │
 ├── notebooks/                 # Jupyter Notebooks for experiments, analysis, and visualization
 │   └── 01_EDA.ipynb           # Notebook for exploratory data analysis
@@ -37,7 +39,7 @@ This mini project explored the BERT4Rec model on the MovieLens dataset, and comp
 │
 ├── requirements.txt           # Python dependencies (e.g., torch, pandas, numpy)
 └── README.md                  # Project description, key findings, etc.
-
+'''
 
 ## Results Summary
 

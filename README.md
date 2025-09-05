@@ -4,7 +4,7 @@
 ![Sequential Recs](https://img.shields.io/badge/📈-Sequential%20Recs-green)
 ![Transformer Inside](https://img.shields.io/badge/⚡-Transformer%20Powered-yellow)
 ![Baseline](https://img.shields.io/badge/baseline-Popularity-grey)
-![Dataset](https://img.shields.io/badge/dataset-MovieLens%201M-orange)
+![Dataset](https://img.shields.io/badge/dataset-MovieLens%2032M-orange)
 ![Notebook](https://img.shields.io/badge/run%20in-Jupyter-blue?logo=jupyter)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Bake with Love](https://img.shields.io/badge/🍰-Bake%20with%20Love-pink)

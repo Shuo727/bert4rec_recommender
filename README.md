@@ -24,7 +24,11 @@ This mini project explored the BERT4Rec model on the MovieLens dataset, and comp
 │
 ├── data/                      # Folder to store raw data and preprocessed data
 │   └── raw/                   # Original MovieLens 32m dataset (download from: https://grouplens.org/datasets/movielens/32m/)
+|.  └── processed/test_sequences.json
 │
+|── model/
+|.  └── bert4rec_checkpoint.pth # trained model
+|
 ├── notebooks/                 # Jupyter Notebooks for experiments, analysis, and visualization
 │   └── 01_EDA.ipynb           # Notebook for exploratory data analysis
 │   └── 02_bert4rec.ipynb      # Notebook for BERT4Rec implementation and training

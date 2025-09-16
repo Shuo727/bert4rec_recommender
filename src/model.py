@@ -157,3 +157,33 @@ class BERT4Rec(nn.Module):
             ignore_index=-100,
         )
         return logits, loss
+
+    def encode_sequence(self, input_ids: Tensor) -> Tensor:
+        """
+        Encode a batch of padded item-id sequences into token-level hidden states.
+
+        Args:
+            input_ids: LongTensor, shape (batch_size, seq_len)
+            
+        Returns:
+            hidden: FloatTensor, shape (batch_size, seq_len, embed_dim) 
+        """
+        
+        self.eval()
+        batch_size, seq_len = input_ids.shape
+        assert seq_len <= self.position_embedding.num_embeddings, "sequence longer than max_len (position embedding size)"
+
+        # Create position IDs
+        pos = torch.arange(seq_len, device=input_ids.device).unsqueeze(0).expand(batch_size, seq_len)
+        
+        # Embed items and positions
+        x = self.item_embedding(input_ids) + self.position_embedding(pos)
+        x = self.dropout(x)
+
+        # Padding mask: True->pad, False->keep
+        key_padding_mask = input_ids.eq(self.pad_id)  # (batch_size, seq_len)
+
+        # Transformer encoder 
+        hidden = self.transformer_encoder(x, src_key_padding_mask=key_padding_mask)
+
+        return hidden
